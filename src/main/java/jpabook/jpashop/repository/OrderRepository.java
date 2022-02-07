@@ -11,7 +11,7 @@ import javax.persistence.criteria.*;
 import java.util.ArrayList;
 import java.util.List;
 
-import static sun.net.InetAddressCachePolicy.get;
+
 
 @Repository
 @RequiredArgsConstructor
@@ -47,7 +47,7 @@ public class OrderRepository {
         if (StringUtils.hasText(orderSearch.getMemberName())) {
             if (isFirstCondition) {
                 jpql += " where";
-                isFirstCondition = false
+                isFirstCondition = false;
             } else {
                 jpql += " and";
             }
